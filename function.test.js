@@ -1,4 +1,4 @@
-const {sum, stringLength, reverseString }= require('./function');
+const {sum, stringLength, reverseString, Calculator }= require('./function');
 
 test('add 1 + 2 to equal 3', () => { 
     expect(sum(1, 2)).toBe(3);
@@ -33,3 +33,55 @@ test('sum number of letters in string', () => {
     //assert
     expect(actual).toBe(reverseString(string));
   })
+
+  test('1 + 2 should return 3', () => {
+    //arrange
+    const num1 = 1;
+    const num2 = 2;
+    //act
+    const actual = sum(num1, num2);
+    //assert
+    expect(actual).toBe(3);
+  }
+    )
+
+    test('1 - 2 should return -1', () => {
+        //arrange
+        const num1 = 1;
+        const num2 = 2;
+        //act
+        const calculator = new Calculator(num1, num2);
+        const actual = calculator.subtract();
+      
+        //assert
+        expect(actual).toBe(-1);
+    }
+        )
+
+        test('1 * 2 should return 2', () => {
+            //arrange
+            const num1 = 1;
+            const num2 = 2;
+            //act
+            const calculator = new Calculator(num1, num2);
+            const actual = calculator.multiply();
+            //assert
+            expect(actual).toBe(2);
+        }
+            )
+
+            test('1 / 2 should return 0.5', () => {
+                //arrange
+                const num1 = 1;
+                const num2 = 2;
+                //act
+                const calculator = new Calculator(num1, num2);
+                const actual = calculator.divide();
+                //assert
+                expect(actual).toBe(0.5);
+            }
+                )
+
+                
+
+
