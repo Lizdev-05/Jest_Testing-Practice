@@ -1,4 +1,4 @@
-const {sum, stringLength, reverseString, Calculator }= require('./function');
+const {sum, stringLength, reverseString, Calculator, capString }= require('./function');
 
 test('add 1 + 2 to equal 3', () => { 
     expect(sum(1, 2)).toBe(3);
@@ -82,6 +82,14 @@ test('sum number of letters in string', () => {
             }
                 )
 
-                
+                test('first letter of string should be capitalized', () => {
+                    //arrange
+                    const string = 'oyinlade';
+                    //act
+                    const actual = capString(string);
+                    //assert
+                    expect(actual).toBe('Oyinlade');
+                }
+                    )
 
 

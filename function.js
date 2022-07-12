@@ -36,8 +36,13 @@ class Calculator {
     }
 }
 
+const capString = (string) => {
+    const [first, ...rest] = string.split('');
+    return [first.toUpperCase(), ...rest].join('');
+};
 
 
 
 
-module.exports = {sum, stringLength, reverseString, Calculator};
+
+module.exports = {sum, stringLength, reverseString, Calculator, capString};
