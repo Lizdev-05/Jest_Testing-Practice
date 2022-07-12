@@ -1,4 +1,4 @@
-const {sum, stringLength }= require('./function');
+const {sum, stringLength, reverseString }= require('./function');
 
 test('add 1 + 2 to equal 3', () => { 
     expect(sum(1, 2)).toBe(3);
@@ -20,4 +20,16 @@ test('sum number of letters in string', () => {
     const actual = () => {
       stringLength(string);
     };
-  })  
+  
+    //assert
+    expect(actual).toThrowError();
+  }); //this is a function that throws an error
+  
+  test('should return reverse string', () => {
+    //arrange
+    const string = 'hello';
+    //act
+    const actual = reverseString(string);
+    //assert
+    expect(actual).toBe(reverseString(string));
+  })
